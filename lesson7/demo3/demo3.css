@@ -1,0 +1,28 @@
+.tab {
+	width: 600px;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+.tab tr td,.tab tr th {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.tab tr th {
+	background: #4CAF50;
+	color: #fff;
+	text-align: left;
+}
+.tab tbody tr:nth-child(odd) td {
+	background: #F1F1F1;
+}
+.tab2 {
+	margin-top: 20px;
+}
+.tab.tab2 tr th,.tab.tab2 tr td{
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+.tab.tab2 tr th {
+	background: transparent;
+	color: #000;
+}

@@ -1,0 +1,36 @@
+.triangle {
+	width: 0;
+	height: 0;
+	border-top: 50px solid #0600FF;
+	border-right: 50px solid #FFFF00;
+	border-bottom: 50px solid #008B00;
+	border-left: 50px solid #FF0400;
+	margin-bottom: 20px;
+}
+.triangle1 {
+	border-color: transparent;
+	border-top-color: #0600FF;
+}
+.triangle2 {
+	border-color: transparent;
+	border-left-color: #FF0400;
+}
+.triangle3 {
+	border-color: transparent;
+	border-right-color: #FFFF00;
+}
+.triangle4 {
+	border-color: transparent;
+	border-bottom-color: #008B00;
+}
+.triangle5 {
+	border-color: transparent;
+	border-left-color: #FF0400;
+	border-bottom-color: #FF0400;
+}
+.triangle6 {
+	border-color: transparent;
+	border-right-color: #008B00;
+	border-bottom-color: #008B00;
+}
+
