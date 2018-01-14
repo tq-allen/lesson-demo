@@ -1,0 +1,27 @@
+.content{
+	width: 600px;
+	margin: 0 auto;
+	color: #000;
+}
+.content p{
+	padding: 20px;
+}
+.content1{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.content2{
+	background: #FFE7E7;
+	border-left: 5px solid #F2453E;
+	border-right: 5px solid #F2453E;
+}
+.content3{
+	background: #FFFFD9;
+	border-top: 5px solid #FFE94E;
+	border-bottom: 5px solid #FFE94E;
+}
+.content4{
+	background: #E8FFE8;
+	border: 1px solid #50AD55;
+	border-bottom-width: 5px;
+}
