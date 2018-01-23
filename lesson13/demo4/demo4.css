@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+	background: #ccc;
+	display: table;
+	text-align: center;
+}
+.box-cell {
+	display: table-cell;
+	vertical-align: middle;
+}

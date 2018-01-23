@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.box {
+	background: #ccc;
+	padding: 30px 0;
+	text-align: center;
+}
+.box a {
+	display: inline-block;
+	background: red;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 4px;
+	text-decoration: none;
+}

@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ccc;
+}
+
+.box {
+	width: 300px;
+	height: 200px;
+	background: #fc0d1b;
+	margin: 10px auto;
+}
