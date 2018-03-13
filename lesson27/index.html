@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>登录|注册</title>
+		
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="login-icon"><i class="fa fa-user-circle"></i></div>
+		<div class="login-reg">
+			<div class="login-reg-con">	
+				<div class="login">
+					<div class="login-reg-tabs">
+						<span class="login-btn active">登录</span>
+						<span class="reg-btn">注册</span>
+					</div>
+					<form class="login-form" action="">
+						<div class="login-tips"></div>
+						<div class="login-form-item">
+							<input type="text" placeholder="用户名" id="login_username" />
+							<i class="fa fa-user-o"></i>
+						</div>
+						<div class="login-form-item">
+							<input type="password" placeholder="密码" id="login_password" />
+							<i class="fa fa-lock"></i>
+						</div>
+						<input class="login-form-submit" type="submit" value="登录" />
+						<span class="login-reg-close"><i class="fa fa-close"></i></span>
+					</form>
+				</div>
+				<div class="reg">
+					<div class="login-reg-tabs">
+						<span class="login-btn">登录</span>
+						<span class="reg-btn active">注册</span>
+					</div>
+					<form class="reg-form" action="">
+						<div class="reg-tips"></div>
+						<div class="reg-form-item">
+							<input type="text" placeholder="输入用户名" id="reg_username" />
+							<i class="fa fa-user-o"></i>
+						</div>
+						<div class="reg-form-item">
+							<input type="password" placeholder="输入密码" id="reg_password" />
+							<i class="fa fa-lock"></i>
+						</div>
+						<div class="reg-form-item">
+							<input type="password" placeholder="再次输入密码" id="reg_password_again" />
+							<i class="fa fa-lock"></i>
+						</div>
+						<input class="reg-form-submit" type="submit" value="注册" />
+						<span class="login-reg-close"><i class="fa fa-close"></i></span>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			var login_reg_con = document.querySelector(".login-reg-con")
+			var login_reg_enter = document.querySelector(".login-icon")
+			var login = document.querySelector(".login")
+			var reg = document.querySelector(".reg")
+			var login_reg_close = document.querySelector(".login-reg-close")
+			
+			//点击弹出登录框
+			login_reg_enter.addEventListener("click",function(e){
+				e.stopPropagation()
+				login_reg_con.style.display = "block"
+			})
+			
+			//事件代理：切换登录和注册，关闭登录注册框
+			login_reg_con.addEventListener("click",function(e){
+				e.stopPropagation()
+				if(e.target.classList.contains("login-btn")){
+					login.classList.remove("active")
+				}
+				if(e.target.classList.contains("reg-btn")){
+					login.classList.add("active")
+				}
+				if(e.target.classList.contains("fa-close")){
+					login_reg_con.style.display = "none"
+				}
+			})
+			
+			//点击登录注册框以外的区域隐藏登录注册框
+			document.onclick = function(){
+				login_reg_con.style.display = "none"
+			}
+			
+			//登录表单验证
+			var login_tips = document.querySelector(".login-tips")
+			var login_username = document.querySelector("#login_username")
+			var login_password= document.querySelector("#login_password")
+			
+			login_username.onblur = function(){
+				if(this.value !== "fighting"){
+					login_tips.innerText = "用户名错误"
+				}
+			}
+			login_password.onblur = function(){
+				if(this.value !== "fighting"){
+					login_tips.innerText = "密码错误"
+				}
+			}
+			
+			document.querySelector(".login-form").onsubmit = function(e){
+				e.preventDefault()
+				if(login_username.value === ''){
+					login_tips.innerText = "用户名必填"
+					return
+				}
+				if(login_password.value === ''){
+					login_tips.innerText = "密码必填"
+					return
+				}
+				this.submit()
+			}
+			
+			//注册表单验证
+			var reg_tips = document.querySelector(".reg-tips")
+			var reg_username = document.querySelector("#reg_username")
+			var reg_password = document.querySelector("#reg_password")
+			var reg_password_again = document.querySelector("#reg_password_again")
+			
+			reg_username.onblur = function(){
+				if(!/^\w{6,20}$/.test(this.value)){
+					reg_tips.classList = "reg-tips"
+					reg_tips.innerText = "用户名为6-20位字母、数字、下划线"
+				}else{
+					reg_tips.classList = "reg-tips useful"
+					reg_tips.innerText = "可用用户名"
+				}
+			}
+			
+			reg_password.onblur = function(){
+				if(!/^[\w\+\-\*\/\%\$\&]{8,20}$/.test(this.value)){
+					reg_tips.classList = "reg-tips"
+					reg_tips.innerText = "密码为8-20位字母、数字、下划线、特殊符号"
+				}else{
+					reg_tips.classList = "reg-tips useful"
+					reg_tips.innerText = "密码设置成功，请再次输入确认"
+				}
+			}
+			
+			reg_password_again.onblur = function(){
+				if(reg_password.value !== this.value){
+					reg_tips.classList = "reg-tips"
+					reg_tips.innerText = "两次输入的密码不一致"
+				}else{
+					reg_tips.classList = "reg-tips useful"
+					reg_tips.innerText = "密码设置成功"
+				}
+			}
+			
+			
+			document.querySelector(".reg-form").onsubmit = function(e){
+				e.preventDefault()
+				if(reg_username.value === ''){
+					reg_tips.classList = "reg-tips"
+					reg_tips.innerText = "用户名必填"
+					return
+				}
+				if(reg_password.value === ''){
+					reg_tips.classList = "reg-tips"
+					reg_tips.innerText = "密码必填"
+					return
+				}
+				if(reg_password_again.value === ''){
+					reg_tips.classList = "reg-tips"
+					reg_tips.innerText = "密码必填"
+					return
+				}
+				this.submit()
+			}
+		</script>
+	</body>
+</html>

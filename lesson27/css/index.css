@@ -1,0 +1,32 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+html,body{height: 100%;}
+
+.login-icon{position: fixed; top: 20px; right: 20px; cursor: pointer;}
+.login-icon i{font-size: 20px;}
+
+.login-reg{height: 100%; background: linear-gradient(to right top, rgba(0,0,0,.5), rgba(255,232,64,.5)), url(../img/bg.jpg) no-repeat center center; background-size: cover; }
+.login-reg-con{ position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); display: none;}
+
+.login,.reg{background: #fff; padding: 10px 40px 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotateY(0); backface-visibility: hidden; transition: all .5s ease;}
+.reg{transform: translate(-50%,-50%) rotateY(180deg);}
+.login.active{transform: translate(-50%,-50%) rotateY(180deg);}
+.login.active+.reg{transform: translate(-50%,-50%) rotateY(0deg);}
+
+
+.login-reg-tabs{text-align: center; margin-bottom: 20px;}
+.login-reg-tabs span{display: inline-block; font-size: 18px; height: 30px; line-height: 28px; margin: 0 10px; color: #333; border-bottom: 2px solid transparent; cursor: pointer;}
+.login-reg-tabs span.active{border-bottom-color: #333;}
+
+.login-form-item,.reg-form-item{position: relative; margin-bottom: 10px;}
+
+.login-form-item input[type=text],.login-form-item input[type=password],.reg-form-item input[type=text],.reg-form-item input[type=password]{width: 300px; border: 1px solid #a9a9a9; height: 40px; padding-left: 40px; outline: none;}
+.login-form-item i,.reg-form-item i{position: absolute; top: 9px; left: 10px; font-size: 20px; color: #666;}
+
+.login-form-submit,.reg-form-submit{width: 60px; height: 30px; border: 1px solid #a9a9a9; color: #333; background: none; outline: none; cursor: pointer;}
+
+.login-reg-close{position: absolute; top: 10px; right: 10px; cursor: pointer; display: block;}
+.login-reg-close i{font-size: 20px; color: #333;}
+
+.login-tips,.reg-tips{height: 20px; line-height: 20px; color: #f00; font-size: 12px;}
+.reg-tips.useful{color: green;}
