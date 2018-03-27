@@ -82,7 +82,7 @@ var app = {
 	
 	getData(callback) {
 		let xhr = new XMLHttpRequest()
-		xhr.open('GET','http://weixin.jirengu.com/weather/',true)
+		xhr.open('GET','https://weixin.jirengu.com/weather',true)
 		xhr.send()
 		xhr.onload = function(){
 			callback(JSON.parse(xhr.responseText))
