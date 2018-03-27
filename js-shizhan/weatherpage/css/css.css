@@ -154,3 +154,50 @@ body{
 .weather .weather-future li img{
 	width: 40%;
 }
+
+@media only screen and (max-width: 768px){
+	.weather{
+		width: 100%;
+		height: auto;
+	}
+	.weather .weather-top {
+		height: auto;
+	}
+	.weather .weather-city{
+		right: 50%;
+		top: -100px;
+		transform: translateX(50%);
+	}
+	.weather .weather-suggestion{
+		margin: 40px auto 50px;
+	}
+	.weather .weather-suggestion-nav li{
+		font-size: 14px;
+		padding: 2px 0;
+		display: flex;
+		flex-direction: column;
+		width: 20%;
+		align-items: center;
+	}
+	.weather .weather-bottom{
+		height: auto;
+		flex-wrap: wrap;
+	}
+	.weather .weather-temperature,
+	.weather .weather-img{
+		width: 50%;
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+	.weather .weather-future{
+		width: 100%;
+		border-top: 1px solid rgba(0,0,0,.2);
+		margin-top: 10px;
+	}
+	.weather .weather-future li{
+		border-left: none;
+	}
+	.weather .weather-future li+li{
+		border-left: 1px solid rgba(0,0,0,.2);
+	}
+}
