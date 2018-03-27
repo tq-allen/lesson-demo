@@ -126,12 +126,12 @@ body{
 .weather .weather-img{
 	display: flex;
 	flex-direction: column;
-	padding: 0 10px;
+	padding: 0 30px;
 	justify-content: center;
 	align-items: center;
 }
 .weather .weather-img img{
-	width: 30%;
+	width: 40px;
 }
 .weather .weather-future{
 	list-style: none;
