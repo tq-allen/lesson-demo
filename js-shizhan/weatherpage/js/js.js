@@ -49,7 +49,7 @@ var app = {
 		var week = ['日','一','二','三','四','五','六']
 		$('.weather-temperature-time').innerText = `${setTime(weatherCityTime.getMonth()+1)}月${setTime(weatherCityTime.getDate())}日 星期${week[weatherCityTime.getDay()]}`
 		
-		$('.weather-img img').src = `http://weixin.jirengu.com/images/weather/code/${data.weather[0].now.code}.png`
+		$('.weather-img img').src = `//weixin.jirengu.com/images/weather/code/${data.weather[0].now.code}.png`
 		
 		$(".weather-pm25").innerText = `pm25/${data.weather[0].now.air_quality.city.pm25} ${data.weather[0].now.air_quality.city.quality}`
 		
@@ -60,7 +60,7 @@ var app = {
 		
 		var futureImg = $$('.weather-future-img')
 		for (var i = 0; i < futureImg.length; i++) {
-			futureImg[i].src = `http://weixin.jirengu.com/images/weather/code/${data.weather[0].future[i+1].code1}.png`
+			futureImg[i].src = `//weixin.jirengu.com/images/weather/code/${data.weather[0].future[i+1].code1}.png`
 		}
 		
 		
@@ -82,7 +82,7 @@ var app = {
 	
 	getData(callback) {
 		let xhr = new XMLHttpRequest()
-		xhr.open('GET','http://weixin.jirengu.com/weather/',true)
+		xhr.open('GET','//weixin.jirengu.com/weather/',true)
 		xhr.send()
 		xhr.onload = function(){
 			callback(JSON.parse(xhr.responseText))
