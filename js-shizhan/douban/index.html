@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>豆瓣电影-单页应用</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="referrer" content="never">
+	
+	<link href="//cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<nav>
+		<div class="active">
+			<svg class="icon"><use xlink:href="#icon-ranking"></use></svg>
+			<p>TOP250</p>
+		</div>
+		<div>
+			<svg class="icon"><use xlink:href="#icon-beimei"></use></svg>
+			<p>北美</p>
+		</div>
+		<div>
+			<svg class="icon"><use xlink:href="#icon-search"></use></svg>
+			<p>搜索</p>
+		</div>
+	</nav>
+
+	<main>
+		<section class="top250">
+			<!-- <a class="item" href="#">
+				<img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg" alt="">
+				<div class="item-txt">
+					<h2>电影名</h2>
+					<p><span class="score">9.3</span>分 / <span class="collection">100</span>收藏</p>
+					<p><span class="year">1998</span> / <span class="style">犯罪/爱情</span></p>
+					<p>导演：<span class="director">赵四</span></p>
+					<p>主演：<span class="main-actor">赵四、赵四、赵四</span></p>
+				</div>
+			</a> -->
+			<div class="container"></div>
+			<div class="loading"><svg class="icon"><use xlink:href="#icon-loading"></use></svg></div>
+		</section>
+		<section class="beimei">
+			<!-- <a class="item" href="#">
+				<img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg" alt="">
+				<div class="item-txt">
+					<h2>电影名</h2>
+					<p><span class="score">9.3</span>分 / <span class="collection">100</span>收藏</p>
+					<p><span class="year">1998</span> / <span class="style">犯罪/爱情</span></p>
+					<p>导演：<span class="director">赵四</span></p>
+					<p>主演：<span class="main-actor">赵四、赵四、赵四</span></p>
+				</div>
+			</a> -->
+			<div class="container"></div>
+			<div class="loading"><svg class="icon"><use xlink:href="#icon-loading"></use></svg></div>
+		</section>
+		<section class="search">
+			<div class="container">
+				<div class="search-form">
+					<input type="text" placeholder="搜索电影">
+					<button class="search-btn" type="button">搜索</button>
+				</div>
+				<!-- <a class="item" href="#">
+					<img src="http://img7.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg" alt="">
+					<div class="item-txt">
+						<h2>电影名</h2>
+						<p><span class="score">9.3</span>分 / <span class="collection">100</span>收藏</p>
+						<p><span class="year">1998</span> / <span class="style">犯罪/爱情</span></p>
+						<p>导演：<span class="director">赵四</span></p>
+						<p>主演：<span class="main-actor">赵四、赵四、赵四</span></p>
+					</div>
+				</a> -->
+				<div class="search-result"></div>
+			</div>	
+			<div class="loading"><svg class="icon"><use xlink:href="#icon-loading"></use></svg></div>
+		</section>
+	</main>
+
+	<div class="to-top"><svg class="icon"><use xlink:href="#icon-totop"></svg></div>
+
+
+	<script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src="//at.alicdn.com/t/font_623399_t2b3niu9y97o80k9.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

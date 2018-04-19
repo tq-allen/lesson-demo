@@ -1,0 +1,144 @@
+body{
+	font: 14px/1.5 'Microsoft yahei';
+	color: #333;
+}
+*,
+::before,
+:before,
+::after,
+:after{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+nav{
+	display: flex;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-top: 1px solid #ddd;
+	background: #fff;
+	z-index: 100;
+}
+nav > div{
+	font-size: 12px;
+	flex: 1;
+	padding: 10px 0;
+	text-align: center;
+}
+nav > div svg{
+	font-size: 20px;
+}
+nav > div.active{
+	color: orange;
+}
+html,
+body,
+main{
+	height: 100%;
+}
+main{
+	padding-bottom: 60px;
+}
+main>section{
+	height: 100%;
+	padding: 10px 10px 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;/*没有此属性滚动起来很不顺畅，失去“惯性”*/
+}
+.item{
+	display: block;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+.item img{
+	width: 70px;
+	float: left;
+}
+.item .item-txt{
+	margin-left: 80px;
+	line-height: 20px;
+}
+.item .item-txt h2{
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+	line-height: 24px;
+}
+.item .item-txt .score,
+.item .item-txt .collection{
+	color: orange;
+}
+
+.loading{
+	padding: 10px;
+	text-align: center;
+	display: none;
+}
+.loading.active{
+	display: block;
+}
+.loading svg{
+	font-size: 22px;
+	animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate{
+	from{
+		transform: rotate(0)
+	}
+	to{
+		transform: rotate(360deg)
+	}
+}
+
+.beimei,
+.search{
+	display: none;
+}
+
+.search .search-form{
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.search .search-form input[type=text]{
+	width: calc(100% - 60px);
+	height: 32px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 5px;
+	outline: none;
+}
+.search .search-form button{
+	width: 50px;
+	height: 32px;
+	border: none;
+	background: #FF5722;
+	color: #fff;
+	border-radius: 3px;
+	outline: none;
+}
+
+.to-top{
+	position: absolute;
+	bottom: 70px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	background: #fff;
+	display: none;
+}
